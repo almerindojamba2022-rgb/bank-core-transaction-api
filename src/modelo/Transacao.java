@@ -1,11 +1,12 @@
 package com.bank.core.model;
+
 import java.time.LocalDateTime;
 
 public class Transacao {
     private Long id;
     private String contaOrigem;
     private String contaDestino;
-    private Double valor;
+    private double valor;
     private String status;
     private LocalDateTime dataHora;
     private String motivoRejeicao;
@@ -15,7 +16,7 @@ public class Transacao {
         this.status = "PENDENTE";
     }
 
-    public Transacao(String origem, String destino, Double valor) {
+    public Transacao(String origem, String destino, double valor) {
         this.contaOrigem = origem;
         this.contaDestino = destino;
         this.valor = valor;
@@ -29,11 +30,12 @@ public class Transacao {
     public void setContaOrigem(String contaOrigem) { this.contaOrigem = contaOrigem; }
     public String getContaDestino() { return contaDestino; }
     public void setContaDestino(String contaDestino) { this.contaDestino = contaDestino; }
-    public Double getValor() { return valor; }
-    public void setValor(Double valor) { this.valor = valor; }
+    public double getValor() { return valor; }
+    public void setValor(double valor) { this.valor = valor; }
     public String getStatus() { return status; }
     public void setStatus(String status) { this.status = status; }
     public LocalDateTime getDataHora() { return dataHora; }
+    public void setDataHora(LocalDateTime dataHora) { this.dataHora = dataHora; }
     public String getMotivoRejeicao() { return motivoRejeicao; }
     public void setMotivoRejeicao(String motivoRejeicao) { this.motivoRejeicao = motivoRejeicao; }
 }

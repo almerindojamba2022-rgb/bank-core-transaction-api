@@ -1,12 +1,11 @@
 package com.bank.core.antifraud;
-import com.bank.core.model.Transacao;
-import org.springframework.stereotype.Service;
 
-@Service
+import com.bank.core.model.Transacao;
+
 public class AntiFraudService {
 
-    private static final Double LIMITE_SUSPEITO = 1000000.00;
-    private static final Double LIMITE_DIARIO = 5000000.00;
+    private static final double LIMITE_SUSPEITO = 1_000_000.00;
+    private static final double LIMITE_DIARIO = 5_000_000.00; // ainda não usado
 
     public boolean validar(Transacao t) {
         if (t.getValor() <= 0) {
